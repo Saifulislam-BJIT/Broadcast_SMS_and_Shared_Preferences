@@ -39,7 +39,7 @@ class MainActivity : AppCompatActivity() {
         val messageCountManager = MessageCountManager(this)
         val listItems = messageCountManager.getAll().toList()
         val recyclerView = findViewById<RecyclerView>(R.id.recycler_view)
-        recyclerView.adapter = ItemAdapter(listItems)
+        recyclerView.adapter = ItemAdapter(listItems.reversed())
         recyclerView.setHasFixedSize(true)
     }
 

@@ -1,6 +1,5 @@
 package com.saiful.smsbroadcastreceiver.adapter
 
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -28,7 +27,6 @@ class ItemAdapter(private val itemList: List<*>): RecyclerView.Adapter<ItemAdapt
         val item = itemList[position]
         val temp = item.toString().split(")","(",",")
 
-        Log.d("TAG", "item: ${temp[2]}");
         holder.number.text = temp[1]
         holder.count.text = temp[2]
     }
